@@ -16,6 +16,7 @@ body{
     font-weight: 500;
     display: flex;
     min-height: 100vh;
+    min-width: 100vh;
 }
 /*mudando largura e display do main*/
 main{
@@ -117,14 +118,15 @@ main form input[type="submit"]:hover{
 }
 /*mudando a imagem de posição*/
 section.images{
+    width: 50vw;
     display: flex;
     align-items: flex-end;
-    padding: 2rem;
+    justify-content: flex-end;
+    padding: 4rem;
 }
 /*mudando tamanho da img*/
 section.images img{
-    width: 75%;
-    margin-left: 4rem;
+    width: 90%;
 }
 /*criando, posicionado e estilizando o circulo*/
 section.images .circle{
@@ -136,4 +138,35 @@ section.images .circle{
     background: linear-gradient(45deg, #e8cbc0, #636fa4);
     clip-path: circle(40% at right 85%);
     z-index: -1;
+}
+
+/*adicionando responsividade para o site*/
+/*aumentando a imagem para telas entre 900 e 1200px */
+@media only screen and (min-width: 900px) and (max-width: 1200px){
+    section.images img{
+        width: 110%;
+    }
+}
+/*tirando a img e centralizando o formulario para telas menores que 900px*/
+@media only screen and (max-width: 900px){
+    section.images{
+        display: none;
+        visibility: hidden;
+    }
+    main{
+        width: 100vw;
+    }
+}
+/*fazendo ajustos no titulo e no tamanho das letras para telas menores q 450px*/
+@media only screen and (max-width: 450px){
+    #titulo{
+        text-align: center;
+        font-size: 2rem;
+    }
+    main .alternative span{
+        font-size: 0.8rem;
+    }
+    main form label span, main form input[type="submit"]{
+        font-size: 1rem;
+    }
 }
