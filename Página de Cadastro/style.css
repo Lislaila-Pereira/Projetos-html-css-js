@@ -1,0 +1,139 @@
+/*importando a fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*resetando os padores do navegador e add a fonte*/
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/*add cor do fundo, da letra, peso da letra, display e altura minima da pag*/
+body{
+    background: #1b2029;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    min-height: 100vh;
+}
+/*mudando largura e display do main*/
+main{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*estilizando o titulo*/
+#titulo{
+    color: #8880fe;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+/*posicao dos logos*/
+main .social-media{
+    display: flex;
+    align-content: center;
+}
+/*tamanho dos logos*/
+main .social-media img{
+    width: 36px;
+    margin-left: 3rem;
+}
+/*tirando a margem esquerda do primeiro icone*/
+main .social-media a:first-child img{
+    margin-left: 0;
+}
+/*aumentando a margem de cima do "or"*/
+main .alternative{
+    margin-top: 1rem;
+}
+/*estilizando a fonte do "or"*/
+main .alternative span{
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+/*criando a linha q fica do lado do or e aplicando ela a direira*/
+main .alternative span::before, main .alternative span::after{
+    position: absolute;
+    content:"";
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.3);
+}
+/*aplicando a linha a esquerda*/
+main .alternative span::after{
+    left: 50px;
+}
+/*colocando display do form em coluna*/
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*colocando os label do form em coluna*/
+main form label{
+    display: flex;
+    flex-direction: column;
+}
+/*estilizando o span*/
+main form label span{
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+/*estilizando os campos de input e a fonte*/
+main form input{
+    background: #161923;
+    width: 300px;
+    height: 50px;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+    outline: none;
+    color: rgba(166, 166, 166);
+    font-size: 1rem;
+    border: 1px solid #040b18;
+    border-radius: 8px;
+}
+/*estilizando o botao de sing up*/
+main form input[type="submit"]{
+    cursor: pointer;
+    width: 50%;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 32px;
+    background: #6c63ff;
+    color: white;
+    font-size: 1.1rem;
+    transition: all .2s ease-in-out;
+}
+/*efeito para quando o mouse passar pelo botao*/
+main form input[type="submit"]:hover{
+    background: #5952d4;
+}
+/*mudando a imagem de posição*/
+section.images{
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+}
+/*mudando tamanho da img*/
+section.images img{
+    width: 75%;
+    margin-left: 4rem;
+}
+/*criando, posicionado e estilizando o circulo*/
+section.images .circle{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, #e8cbc0, #636fa4);
+    clip-path: circle(40% at right 85%);
+    z-index: -1;
+}
